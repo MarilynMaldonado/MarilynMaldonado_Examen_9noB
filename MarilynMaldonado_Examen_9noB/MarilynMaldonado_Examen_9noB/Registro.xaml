@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarilynMaldonado_Examen_9noB.Registro">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="wallpaper.jpg" Aspect="AspectFill"/>
+            <BoxView Color="LightCyan" Opacity="0.8"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Image Grid.Row="0" Source="logo.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+
+                    <Label x:Name="lblUsuario"/>
+                    <Label x:Name="lbUsuario" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" FontSize="20"  TextColor="Black"/>
+                    <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Ingrese el nombre" TextColor="Black"/>
+                    <Entry x:Name="txtPI" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Ingrese el pago inicial" TextColor="Black"/>
+                    <Entry x:Name="txtCuota" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" IsReadOnly="True"></Entry>
+                    <Button x:Name="btnIngresar" Grid.Row="4" Grid.Column="0"  Text="Calcular" TextColor="AliceBlue" FontSize="20" Clicked="btnIngresar_Clicked"/>
+                    <Button x:Name="btnGuardar" Grid.Row="4" Grid.Column="1"  Text="Guardar" TextColor="AliceBlue" FontSize="20" Clicked="btnGuardar_Clicked"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
